@@ -33,7 +33,7 @@ public class main {
 
         printName("Андрей");
 
-        printYear(1900);
+        printYear(2000);
 
     }
 
@@ -69,18 +69,18 @@ public class main {
         System.out.println(name);
     }
 
-    public static void printYear(int printY) {
-        int a = printY;
-        int b = printY;
-        int c = printY;
+    public static void printYear(int printYear) {
+        int a = printYear;
+        int b = printYear;
+        int c = printYear;
         int a1 = a %= 4;
         int b1 = b %= 100;
         int c1 = c %= 400;
 
         if (a1 == 0 && b1 != 0 || c1 == 0) {
-            System.out.println(printY + " год високосный");
+            System.out.println(printYear + " год високосный");
         } else {
-            System.out.println(printY + " год не високосный");
+            System.out.println(printYear + " год не високосный");
         }
     }
 }
