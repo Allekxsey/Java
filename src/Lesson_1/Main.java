@@ -1,9 +1,11 @@
+package Lesson_1;
+
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import sun.management.snmp.jvmmib.JVM_MANAGEMENT_MIBOidTable;
 
 import java.time.Year;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
         byte val = 90;
@@ -33,7 +35,7 @@ public class main {
 
         printName("Андрей");
 
-        printYear(1900);
+        printYear(1700);
 
     }
 
@@ -69,18 +71,12 @@ public class main {
         System.out.println(name);
     }
 
-    public static void printYear(int printY) {
-        int a = printY;
-        int b = printY;
-        int c = printY;
-        int a1 = a %= 4;
-        int b1 = b %= 100;
-        int c1 = c %= 400;
+    public static void printYear(int printYear) {
 
-        if (a1 == 0 && b1 != 0 || c1 == 0) {
-            System.out.println(printY + " год високосный");
+        if (printYear % 4 == 0 && printYear % 100 != 0 || printYear % 400 == 0) {
+            System.out.println(printYear + " год високосный");
         } else {
-            System.out.println(printY + " год не високосный");
+            System.out.println(printYear + " год не високосный");
         }
     }
 }
